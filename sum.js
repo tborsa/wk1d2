@@ -4,7 +4,6 @@
 const getArguments = function() {
   return process.argv.slice(2);
 };
-//console.log(getArguments());
 
 // Change the arguments into numbers
 // Check if the argument is a valid integer
@@ -22,9 +21,6 @@ const numberize = function(arrArguments) {
   return integerArray;
 };
 
-// const testArray = ["one", 2 , "dog"];
-// console.log(numberize(testArray));
-
 // call a function to add the numbers
 // looping through arguments/numbers
 
@@ -36,5 +32,7 @@ const sumArguments = function(arrIntegers){
   return total;
 }
 
-let testIntegers = [2,3,4,5];
-console.log(sumArguments(testIntegers));
+let arguments = getArguments();
+let arrIntegers = numberize(arguments);
+let total = sumArguments(arrArguments);
+console.log(total);
